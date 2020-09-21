@@ -1,0 +1,13 @@
+<h1 style="width: 1310px;display: table;margin: 20px auto 0;text-align: left;padding-left:0;color:#fff">Incognito Highway
+    Viewer
+</h1>
+<div class="container">
+
+    <div *ngFor="let hw of highwayNodes">
+        <div class="highway-node" [routerLink]="'/topicviewer'"[queryParams]="{ node: hw.UID }">
+            <p>UID: {{hw.UID}}</p>
+            <p>IP: {{hw.IP}}</p>
+        </div>
+    </div>
+  
+</div>

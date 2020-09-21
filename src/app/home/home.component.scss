@@ -1,0 +1,44 @@
+.container {
+    border-radius: 25px;
+    margin: 30px;
+    position: relative;
+    height: auto;
+    width: 100%s;
+    display: block;
+    padding: 28px;
+}
+
+
+.highway-node {
+    position: relative;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    padding:12px 16px;
+    background-color: #282C34;
+    color: #fff;
+    margin: 10px;
+    p{
+        margin: 0;
+        line-height: auto;
+        width: auto;
+        position: relative;
+    }
+}
+
+.highway-node:hover {
+    background-color: #39404d;
+}
+
+.highway-node:active {
+    background-color: #25CDD6;
+    color: #000;
+}
+
+@media screen and (min-width:1600px) {
+    .container {
+        margin: 30px auto;
+        display: table;
+    }
+}

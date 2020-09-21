@@ -1,0 +1,22 @@
+<h1 style="width: 100%;display: table;margin: 20px auto 0;text-align: left;padding-left:25px;color:#fff" routerLink="/">
+    Incognito Highway
+    Viewer | {{node}}
+</h1>
+
+<div *ngIf=" (selectedTopic!='')">
+    <div class="filter-shortcut" style="padding-left:25px">
+        <button class="btn-height" (click)="resetViewTopic()">&#x25C0; Topic list</button>
+        <button class="btn-height">{{selectedTopic}}</button>
+    </div>
+</div>
+
+
+    <div class="container" *ngIf="(selectedTopic=='')">
+        <button class="btn-topic" *ngFor="let topic of availiableTopics"
+            (click)="getTopicData(topic.Content)">{{topic.Content}}</button>
+    </div>
+    <div *ngIf="selectedTopic!=''">
+        <div class="container">
+            <p class="logline">{{topicContent}}</p>
+        </div>
+    </div>
